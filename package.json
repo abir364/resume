@@ -12,6 +12,7 @@
 		"lint": "prettier --check ."
 	},
 	"devDependencies": {
+		"@catppuccin/tailwindcss": "^1.0.0",
 		"@fontsource/fira-mono": "^5.2.7",
 		"@neoconfetti/svelte": "^2.2.2",
 		"@sveltejs/adapter-auto": "^7.0.0",

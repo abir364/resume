@@ -1,36 +1,49 @@
 <script>
     import logo from '$lib/images/svelte-logo.svg';
-    import github from '$lib/images/github.svg';
+    import github from '$lib/images/github-mark-white.svg';
 </script>
 
-<header>
-    <div>
-        <div class="corner">
-            <a href="/">
-                <img src={logo} alt="SvelteKit" />
-                <h1>Resume</h1>
-            </a>
-        </div>
-        <div class="Menu">Menu</div>
-        <div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+<header class="flex items-center justify-around font-semibold text-white sticky top-0 bg-ctp-base">
+	<div class="corner">
+		<a href="/">
+			<img src={logo} alt="SvelteKit" />
+			Resume
+		</a>
+	</div>
+	<nav class="flex space-between items-center">
+		<ul>
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/about">About</a>
+			</li>
+			<li>
+				<a href="/projects">Projects</a>
+			</li>
+			<li>
+				<a href="/contact">Contact</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="corner">
+		<a href="https://github.com/abir364">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
-    </div>
 </header>
 
 
 <style>
-    header {
+    /* header {
 		display: flex;
 		justify-content: space-between;
         background-color: #11111b;
         color: #f5c2e7;
         height: 10%;
-	}
+	} */
 
-    .corner {
+	 .corner {
 		width: 3em;
 		height: 3em;
 	}
@@ -41,6 +54,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		text-decoration: none;
 	}
 
 	.corner img {
