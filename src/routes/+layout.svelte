@@ -6,8 +6,8 @@
 	let { children } = $props();
 </script>
 
-<div class="app">
-	<Header />
+<div class="app bg-ctp-base text-ctp-text">
+	<!-- <Header /> -->
 	<Header2 />
 
 	<main>
@@ -16,7 +16,7 @@
 
 	<footer>
 		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
+			Check out my projects on <a href="https://github.com/abir364">GitHub</a>
 		</p>
 	</footer>
 </div>
