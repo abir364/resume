@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
@@ -56,4 +56,39 @@
 		top: 0;
 		display: block;
 	}
+</style> -->
+
+<script>
+	import Info from './Info.svelte';
+	import Profile from './Profile.svelte';
+	import Experience from './Experience.svelte';
+</script>
+
+<svelte:head>
+	<title>Resume</title>
+	<meta name="description" content="Abir's Resume" />
+</svelte:head>
+
+<div class="flex flex-col item-center w-[80%] gap-4 mx-auto my-4">
+	<Info />
+
+	<Profile />
+
+	<Experience />
+
+	<div>
+		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Education</h3>
+	</div>
+	<div>
+		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Projects</h3>
+	</div>
+	<div>
+		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Certifications</h3>
+	</div>
+	<div>
+		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Skills</h3>
+	</div>
+</div>
+
+<style>
 </style>
