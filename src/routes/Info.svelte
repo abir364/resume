@@ -31,7 +31,7 @@
 				</p>
 				<!-- <p class="flex items-center gap-2">
 					<img class="w-[1.5em] h-[1.5em] object-contain" src={github} alt="LinkedIn " />
-					<a href="">Abir Hossain</a>
+					<a href="https://www.linkedin.com/in/abir-hossain-8b57b9174/">Abir Hossain</a>
 				</p> -->
 				<p class="flex items-center gap-2">
 					<img class="w-[1.5em] h-[1.5em] object-contain" src={credly} alt="GitHub " />

@@ -16,7 +16,7 @@
 
 	<footer>
 		<p>
-			Check out my projects on <a href="https://github.com/abir364">GitHub</a>
+			Download my resume <a href="https://github.com/abir364">here</a>
 		</p>
 	</footer>
 </div>
