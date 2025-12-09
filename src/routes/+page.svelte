@@ -1,94 +1,56 @@
-<!-- <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
-</script>
-
-<svelte:head>
-	<title>Resume</title>
-	<meta name="description" content="Abir's Resume" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style> -->
-
 <script>
-	import Info from './Info.svelte';
-	import Profile from './Profile.svelte';
-	import Experience from './Experience.svelte';
+	// Dynamically import all images from $lib/images/tech
+	const imageModules = import.meta.glob('$lib/images/tech/*.{svg,png,jpg,jpeg}', { eager: true });
+	let logos = Object.values(imageModules)
+		.map((mod) => mod.default)
+		.filter(Boolean);
 </script>
 
 <svelte:head>
-	<title>Resume</title>
-	<meta name="description" content="Abir's Resume" />
+	<title>Abir's Portfolio</title>
+	<meta name="description" content="Abir's Portfolio Homepage" />
 </svelte:head>
 
-<div class="flex flex-col item-center w-[80%] gap-4 mx-auto my-4">
-	<Info />
-
-	<Profile />
-
-	<Experience />
-
-	<div>
-		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Education</h3>
-	</div>
-	<div>
-		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Projects</h3>
-	</div>
-	<div>
-		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Certifications</h3>
-	</div>
-	<div>
-		<h3 class="text-ctp-pink text-3xl font-bold pb-2">Skills</h3>
+<div class="flex flex-col items-center justify-center min-h-[70vh] text-center px-4">
+	<h1 class="text-5xl font-extrabold text-ctp-lavender mb-4 drop-shadow-lg">Hi, I'm Abir 👋</h1>
+	<p class="text-xl text-ctp-mauve mb-6 max-w-2xl">
+		I'm a DevOps Engineer with experience in cloud infrastructure, DevOps, and security. I love
+		building & deploying scalable web applications, automating deployments and implementing security
+		and complicance standards for infrastructure.
+	</p>
+	<div class="carousel mt-8">
+		<h1 class="text-4xl font-bold text-ctp-lavender mb-8 drop-shadow-lg">I have worked with</h1>
+		<div class="track">
+			{#each logos.concat(logos) as logo}
+				<img src={logo} alt="logo" />
+			{/each}
+		</div>
 	</div>
 </div>
 
 <style>
+	.carousel {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.track {
+		display: flex;
+		width: max-content;
+		animation: scroll 30s linear infinite;
+	}
+
+	.track img {
+		height: 50px;
+		margin: 0 2rem;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
 </style>

@@ -1,6 +1,6 @@
 <script>
 	import github from '$lib/images/github-mark-white.svg';
-	// import linkedin from '$lib/images/linkedin.svg';
+	import linkedin from '$lib/images/linkedin.png';
 	import gmail from '$lib/images/gmail.svg';
 	import address from '$lib/images/map.svg';
 	import phone from '$lib/images/phone.svg';
@@ -9,7 +9,7 @@
 
 <div class="pb-2">
 	<h1 class="text-ctp-pink text-4xl font-semibold pb-1">Abir Hossain</h1>
-	<h2 class="text-ctp-rosewater text-2xl pb-2">DevOps & Cloud Engineer</h2>
+	<h2 class="text-ctp-rosewater text-2xl pb-2 italic">DevOps & Cloud Engineer</h2>
 
 	<div>
 		<div class="flex flex-row gap-4">
@@ -29,13 +29,13 @@
 				<p class="flex items-center gap-2">
 					<img class="w-[1.5em] h-[1.5em] object-contain" src={phone} alt="Phone " /> 01989052862
 				</p>
-				<!-- <p class="flex items-center gap-2">
-					<img class="w-[1.5em] h-[1.5em] object-contain" src={github} alt="LinkedIn " />
-					<a href="https://www.linkedin.com/in/abir-hossain-8b57b9174/">Abir Hossain</a>
-				</p> -->
 				<p class="flex items-center gap-2">
-					<img class="w-[1.5em] h-[1.5em] object-contain" src={credly} alt="GitHub " />
-					<a href="">Abir Hossain</a>
+					<img class="w-[1.5em] h-[1.5em] object-contain" src={linkedin} alt="LinkedIn " />
+					<a href="https://www.linkedin.com/in/abir-hossain-8b57b9174/">LinkedIn/a>
+				</p>
+				<p class="flex items-center gap-2">
+					<img class="w-[1.5em] h-[1.5em] object-contain" src={credly} alt="Credly " />
+					<a href="">Credly</a>
 				</p>
 			</div>
 		</div>

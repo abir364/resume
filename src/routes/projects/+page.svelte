@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>About</title>
-	<meta name="description" content="About me" />
+	<meta name="description" content="Projects" />
 </svelte:head>
 
 <div class="text-column"></div>

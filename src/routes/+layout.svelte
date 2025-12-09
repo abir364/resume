@@ -1,14 +1,13 @@
 <script>
 	import Header from './Header.svelte';
-	import Header2 from './Header2.svelte';
 	import './layout.css';
+	import resume from '$lib/files/AbirHossainResume.pdf';
 
 	let { children } = $props();
 </script>
 
 <div class="app bg-ctp-base text-ctp-text">
-	<!-- <Header /> -->
-	<Header2 />
+	<Header />
 
 	<main>
 		{@render children()}
@@ -16,7 +15,13 @@
 
 	<footer>
 		<p>
-			Download my resume <a href="https://github.com/abir364">here</a>
+			<a
+				href={resume}
+				download
+				class="inline-block px-4 py-2 bg-ctp-red text-ctp-rosewater-50 rounded font-bold shadow hover:bg-ctp-mauve hover:text-ctp-rosewater-50 focus:bg-ctp-green focus:text-ctp-rosewater-50 transition-colors duration-200"
+			>
+				Download my resume
+			</a>
 		</p>
 	</footer>
 </div>
