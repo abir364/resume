@@ -31,11 +31,11 @@
 				</p>
 				<p class="flex items-center gap-2">
 					<img class="w-[1.5em] h-[1.5em] object-contain" src={linkedin} alt="LinkedIn " />
-					<a href="https://www.linkedin.com/in/abir-hossain-8b57b9174/">LinkedIn/a>
+					<a href="https://www.linkedin.com/in/abir-hossain-8b57b9174/">LinkedIn</a>
 				</p>
 				<p class="flex items-center gap-2">
 					<img class="w-[1.5em] h-[1.5em] object-contain" src={credly} alt="Credly " />
-					<a href="">Credly</a>
+					<a href="https://www.credly.com/users/abir-hossain.347cbadb">Credly</a>
 				</p>
 			</div>
 		</div>
